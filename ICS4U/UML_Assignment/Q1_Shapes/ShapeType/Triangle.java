@@ -43,9 +43,13 @@ public class Triangle extends Shape {
         side3 = s3;
     }
 
+    private double getSemiPerimeter() {
+        return (side1 + side2 + side3)/2.0;
+    }
+
     public double getArea() {
-        double semiPerimeter = (side1 + side2 + side3)/2.0;
-        return Math.sqrt(semiPerimeter*(semiPerimeter-side1)*(semiPerimeter-side2)*(semiPerimeter-side3));
+        double sp = getSemiPerimeter();
+        return Math.sqrt(sp*(sp-side1)*(sp-side2)*(sp-side3));
     }
 
     public double getPerimeter() {
