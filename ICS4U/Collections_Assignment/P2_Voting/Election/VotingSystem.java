@@ -70,7 +70,7 @@ public class VotingSystem {
     public String getFormattedCandidateList() {
         String output = "Candidates:\n";
         for(int i = 0; i < candidateList.size(); i++)
-            output += candidateList.get(i).toStringWinner();
+            output += candidateList.get(i).toString();
         
         return output;
     }
