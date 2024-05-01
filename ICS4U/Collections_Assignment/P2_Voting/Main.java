@@ -28,8 +28,8 @@ public class Main {
         }
         
         int vote = -1;
+        System.out.print("\n" + system.getFormattedCandidateList() + "\nEnter the ID of the candidate you want to vote for (or enter 0 to stop): ");
         while(true) {
-            System.out.print("\n" + system.getFormattedCandidateList() + "\nEnter the ID of the candidate you want to vote for (or enter 0 to stop): ");
             // error checking
             while(!input.hasNextInt()) {
                 System.out.println("Please enter a valid ID.");
@@ -38,12 +38,13 @@ public class Main {
             vote = input.nextInt();
             if(vote == 0)
                 break;
-            if(vote < 0 || vote > numCandidates) {
+            if(vote < 0 || vote > numCandidates)
                 System.out.println("Please enter a valid ID.");
-                continue;
+            else {
+                System.out.println("Vote registered for Candidate " + vote);
+                system.addVote(vote);
+                System.out.print("\n" + system.getFormattedCandidateList() + "\nEnter the ID of the candidate you want to vote for (or enter 0 to stop): ");
             }
-            System.out.println("Vote registered for Candidate " + vote);
-            system.addVote(vote);
         }
 
         system.findWinners();
