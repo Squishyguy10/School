@@ -43,7 +43,7 @@ public class Main {
                 continue;
             }
             System.out.println("Vote registered for Candidate " + vote);
-            system.addVoteSystem(vote);
+            system.addVote(vote);
         }
 
         system.findWinners();

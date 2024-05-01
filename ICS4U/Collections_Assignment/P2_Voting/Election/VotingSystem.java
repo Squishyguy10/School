@@ -83,7 +83,7 @@ public class VotingSystem {
         return output;
     }
 
-    public void addVoteSystem(int i) {
+    public void addVote(int i) {
         candidateList.get(i-1).addVote();
     }
 
