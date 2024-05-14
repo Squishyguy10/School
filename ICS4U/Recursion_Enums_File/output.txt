@@ -1,0 +1,3 @@
+FACTORIAL
+Start: 6
+Sum: 720
