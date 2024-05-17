@@ -14,14 +14,14 @@ enum SeriesCategory {
         if(terms == 0) {
             return start;
         }
-        return arithmeticSeries(start+diff, diff, terms-1);
+        return start + arithmeticSeries(start+diff, diff, terms-1);
     }
 
     public static int geometricSeries(int start, int ratio, int terms) {
         if(terms == 0) {
             return start;
         }
-        return geometricSeries(start*ratio, ratio, terms-1);
+        return start + geometricSeries(start*ratio, ratio, terms-1);
     }
 
     public static int fibonacciSeries(int n) {

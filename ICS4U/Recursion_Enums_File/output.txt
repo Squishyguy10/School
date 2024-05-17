@@ -1,3 +1,5 @@
-FACTORIAL
+ARITHMETIC
 Start: 6
-Sum: 720
+Difference: 11
+Terms: 5
+Sum: 201
